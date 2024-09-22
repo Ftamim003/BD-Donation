@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Tailwind CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                navbarBg: 'rgb(249, 247, 243);',
+               
+                btnColor:'rgb(180, 244, 97)',
+                
+              }
+            }
+          }
+        }
+      </script>
+
+</head>
+<body>
+    <header class="bg-navbarBg h-20 pt-3">
+        <nav class=" w-11/12 flex justify-between mx-auto">
+            <button class="btn w-24 font-bold bg-btnColor">Blog</button>
+            <div class="flex items-center">
+                <img class="w-7" src="assets/logo.png" alt="">
+                <p class="font-bold p-1">Donate Bangladesh</p>
+            </div>
+
+            <div class="flex items-center">
+                <img class="w-7" src="assets/coin.png" alt="">
+                <p><span class="p-1">550 </span> BDT</p>
+            </div>
+        </nav>
+
+        <div class="flex justify-center items-center mt-16 gap-3">
+            <button class="btn w-28 bg-btnColor font-bold">Donation</button>
+            <button class="btn w-28 bg-white font-bold text-gray-500">History</button>
+        </div>
+    </header>
+    
+    <main>
+
+
+        
+    </main>
+
+    <script src="config.tailwind.js"></script>
+</body>
+</html>
