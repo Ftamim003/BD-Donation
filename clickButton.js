@@ -11,7 +11,7 @@ document.getElementById('first-donate-btn').addEventListener('click',function(){
     
     const remainingBalance= mainBalance-inputAmount;
 
-    if(inputAmount<0 || isNaN===false || typeof inputAmount ==='string'){
+    if(inputAmount<0 || isNaN(inputAmount) ){
            alert("invalid input");
            return
     }
@@ -27,6 +27,7 @@ document.getElementById('first-donate-btn').addEventListener('click',function(){
          const text=document.getElementById('noakhali-flood').innerText;
     
         historyTextContainer(inputAmount,text);
+
     }
 
 
@@ -51,7 +52,7 @@ document.getElementById('second-donate-btn').addEventListener('click',function()
 
     
     
-    if(inputAmount<0 || isNaN===false || typeof inputAmount ==='string'){
+    if(inputAmount<0 || isNaN(inputAmount)){
         alert("invalid input");
         return
  }
@@ -68,8 +69,9 @@ else{
 
     const text=document.getElementById('feni-flood').innerText;
 
-
     historyTextContainer(inputAmount,text);
+
+    
 }
   
 
@@ -92,7 +94,7 @@ document.getElementById('third-donate-btn').addEventListener('click',function(){
 
     const remainingBalance= mainBalance-inputAmount;
 
-    if(inputAmount<0 || isNaN===false || typeof inputAmount ==='string'){
+    if(inputAmount<0 || isNaN(inputAmount)){
         alert("invalid input");
         return
  }
@@ -129,6 +131,8 @@ document.getElementById('history-btn').addEventListener('click', function(){
 
     document.getElementById('donation-info-container').classList.add('hidden');
 
+    document.getElementById('footer').classList.add('hidden');
+
 })
 
 
@@ -145,6 +149,8 @@ document.getElementById('donation-btn').addEventListener('click', function(){
     document.getElementById('history-container').classList.add('hidden');
 
     document.getElementById('donation-info-container').classList.remove('hidden');
+    
 
+    document.getElementById('footer').classList.remove('hidden');
 
 })
