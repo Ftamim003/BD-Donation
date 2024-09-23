@@ -6,13 +6,28 @@
 
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
+
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navbarBg: 'rgb(249, 247, 243);',
+           
+            btnColor:'rgb(180, 244, 97)',
+            
+          }
+        }
+      }
+    }
+  </script>
     <title>Document</title>
 </head>
 <body>
 
     <header class="bg-navbarBg h-20 pt-3 ">
         <nav class=" w-11/12 flex justify-between mx-auto">
-            <button onclick="document.location='blog.html'" class="btn w-24 font-bold bg-btnColor">Blog</button>
+            <button onclick="document.location='index.html'" class="btn w-24 font-bold bg-btnColor">Home</button>
             <div class="flex items-center">
                 <img class="w-7" src="assets/logo.png" alt="">
                 <p class="font-bold p-1">Donate Bangladesh</p>
@@ -24,10 +39,7 @@
             </div>
         </nav>
 
-        <div class="flex justify-center items-center mt-16 gap-3">
-            <button class="btn w-28 bg-btnColor font-bold">Donation</button>
-            <button class="btn w-28 bg-white font-bold text-gray-500">History</button>
-        </div>
+        
     </header>
 
 

@@ -1,3 +1,4 @@
+// First Donation Button
 document.getElementById('first-donate-btn').addEventListener('click',function(){
 
     const inputAmount= inputNumberById('first-input-btn');
@@ -9,11 +10,32 @@ document.getElementById('first-donate-btn').addEventListener('click',function(){
     const totalAmount= inputAmount+changeAmount;
     
     const remainingBalance= mainBalance-inputAmount;
+
+    if(inputAmount<0 || isNaN===false || typeof inputAmount ==='string'){
+           alert("invalid input");
+           return
+    }
+    else if(remainingBalance<0){
+
+        alert("Insufficient balance!");
+           return
+    }
  
-    document.getElementById('main-balance').innerText=remainingBalance;
-    document.getElementById('first-amount').innerText=totalAmount;
+    else{
+        document.getElementById('main-balance').innerText=remainingBalance;
+        document.getElementById('first-amount').innerText=totalAmount;
+         const text=document.getElementById('noakhali-flood').innerText;
+    
+        historyTextContainer(inputAmount,text);
+    }
+
+
+
+
 })
 
+
+// Second Donation Button
 
 document.getElementById('second-donate-btn').addEventListener('click',function(){
 
@@ -27,12 +49,36 @@ document.getElementById('second-donate-btn').addEventListener('click',function()
 
     const remainingBalance= mainBalance-inputAmount;
 
+    
+    
+    if(inputAmount<0 || isNaN===false || typeof inputAmount ==='string'){
+        alert("invalid input");
+        return
+ }
+ else if(remainingBalance<0){
 
+    alert("Insufficient balance!");
+       return
+}
+ 
+else{
     document.getElementById('main-balance').innerText=remainingBalance;
     document.getElementById('second-amount').innerText=totalAmount;
-})
 
 
+    const text=document.getElementById('feni-flood').innerText;
+
+
+    historyTextContainer(inputAmount,text);
+}
+  
+
+
+});
+
+
+
+// Third DOnation Button
 
 document.getElementById('third-donate-btn').addEventListener('click',function(){
 
@@ -46,13 +92,31 @@ document.getElementById('third-donate-btn').addEventListener('click',function(){
 
     const remainingBalance= mainBalance-inputAmount;
 
+    if(inputAmount<0 || isNaN===false || typeof inputAmount ==='string'){
+        alert("invalid input");
+        return
+ }
+ else if(remainingBalance<0){
+
+    alert("Insufficient balance!");
+       return
+}
+    else{
+        const text=document.getElementById('movement-injured').innerText;
+
 
     document.getElementById('main-balance').innerText=remainingBalance;
     document.getElementById('third-amount').innerText=totalAmount;
-})
+
+    
+    historyTextContainer(inputAmount,text);
+    }
+});
 
 
 
+
+// History Button
 document.getElementById('history-btn').addEventListener('click', function(){
     document.getElementById('donation-btn').classList.remove('bg-btnColor');
 
@@ -61,8 +125,14 @@ document.getElementById('history-btn').addEventListener('click', function(){
     document.getElementById('history-btn').classList.remove('bg-white');
     document.getElementById('history-btn').classList.add('bg-btnColor','text-gray-800');
 
+    document.getElementById('history-container').classList.remove('hidden');
+
+    document.getElementById('donation-info-container').classList.add('hidden');
+
 })
 
+
+// Donation Button
 document.getElementById('donation-btn').addEventListener('click', function(){
     document.getElementById('history-btn').classList.remove('bg-btnColor','text-gray-800');
 
@@ -72,6 +142,9 @@ document.getElementById('donation-btn').addEventListener('click', function(){
     document.getElementById('donation-btn').classList.add('bg-btnColor');
 
 
+    document.getElementById('history-container').classList.add('hidden');
+
+    document.getElementById('donation-info-container').classList.remove('hidden');
 
 
 })
