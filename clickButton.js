@@ -28,6 +28,8 @@ document.getElementById('first-donate-btn').addEventListener('click',function(){
     
         historyTextContainer(inputAmount,text);
 
+        my_modal_1.showModal();
+
     }
 
 
@@ -71,7 +73,7 @@ else{
 
     historyTextContainer(inputAmount,text);
 
-    
+    my_modal_1.showModal();
 }
   
 
@@ -112,6 +114,8 @@ document.getElementById('third-donate-btn').addEventListener('click',function(){
 
     
     historyTextContainer(inputAmount,text);
+
+    my_modal_1.showModal();
     }
 });
 
@@ -131,7 +135,7 @@ document.getElementById('history-btn').addEventListener('click', function(){
 
     document.getElementById('donation-info-container').classList.add('hidden');
 
-    document.getElementById('footer').classList.add('hidden');
+    // document.getElementById('footer').classList.add('hidden');
 
 })
 
@@ -151,6 +155,6 @@ document.getElementById('donation-btn').addEventListener('click', function(){
     document.getElementById('donation-info-container').classList.remove('hidden');
     
 
-    document.getElementById('footer').classList.remove('hidden');
+    // document.getElementById('footer').classList.remove('hidden');
 
 })

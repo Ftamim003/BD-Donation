@@ -46,7 +46,7 @@
       </div>
     </nav>
 
-    <div class="flex justify-center items-center mt-16 gap-3">
+    <div class="flex justify-center items-center mt-12 md:mt-16 gap-3">
       <button id="donation-btn" class="btn w-28 bg-btnColor font-bold">Donation</button>
       <button id="history-btn" class="btn w-28 bg-white font-bold text-gray-500">History</button>
     </div>
@@ -55,7 +55,22 @@
   <main>
 
     <!-- Modal Part Start -->
-     
+
+    
+    <dialog id="my_modal_1" class="modal">
+      <div class="modal-box">
+        <h3 class="text-3xl md:text-5xl text-center font-bold">Congrates!</h3>
+        <div class="flex justify-center items-center mt-3"><img class="w-9 flex justify-center items-center" src="assets/coin.png" alt=""></div>
+        <p class="py-4 text-center">You Have Donated for Humankind</p>
+        <h3 class="text-xl md:text-3xl font-bold text-center">Successfully</h3>
+        <div class="modal-action flex justify-center items-center">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">close confirmation</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
     <!-- Modal Part End -->
 
 
@@ -63,11 +78,11 @@
     <div id="donation-info-container">
 
       <div class="hero bg-white border-2 rounded-2xl mt-40 w-4/5 mx-auto ">
-        <div class="hero-content flex-col lg:flex-row gap-24">
+        <div class="hero-content flex-col lg:flex-row md:gap-24">
           <img src="assets/noakhali.png" class="mx-auto md:max-w-md lg:max-w-lg rounded-lg shadow-2xl lg:-ml-3" />
           <div>
 
-            <p class="flex bg-gray-300 w-32 p-1 rounded-md justify-center items-center gap-1">
+            <p class="flex bg-gray-300 w-36 p-1 rounded-md justify-center items-center gap-1">
               <img class="w-6" src="assets/coin.png" alt="">
               <span id="first-amount" class="">0 </span> BDT
             </p>
@@ -81,7 +96,7 @@
 
             <input id="first-input-btn" type="text" placeholder="Type Donation Amount"
               class="input input-bordered w-full mb-9" />
-            <button id="first-donate-btn" class="btn bg-btnColor w-full font-bold text-lg">Donate Now</button>
+            <button id="first-donate-btn" class="btn bg-btnColor w-full font-bold text-lg" >Donate Now</button>
           </div>
         </div>
       </div>
@@ -89,10 +104,10 @@
 
 
       <div class="hero  bg-white border-2 rounded-2xl mt-12 w-4/5 mx-auto ">
-        <div class="hero-content flex-col lg:flex-row lg:gap-24">
+        <div class="hero-content flex-col lg:flex-row md:gap-24">
           <img src="assets/feni.png" class="mx-auto md:max-w-md lg:max-w-lg rounded-lg shadow-2xl lg:-ml-3" />
           <div>
-            <p class="flex  bg-gray-300 w-32 p-1 rounded-md justify-center items-center gap-1">
+            <p class="flex  bg-gray-300 w-36 p-1 rounded-md justify-center items-center gap-1">
               <img class="w-6" src="assets/coin.png" alt="">
               <span id="second-amount" class="">0 </span> BDT
             </p>
@@ -116,10 +131,10 @@
 
 
       <div class="hero  bg-white border-2 rounded-2xl mt-12 w-4/5 mx-auto ">
-        <div class="hero-content flex-col lg:flex-row lg:gap-24">
+        <div class="hero-content flex-col lg:flex-row md:gap-24">
           <img src="assets/quota-protest.png" class="mx-auto md:max-w-md lg:max-w-lg rounded-lg shadow-2xl lg:-ml-3" />
           <div>
-            <p class="flex  bg-gray-300 w-32 p-1 rounded-md justify-center items-center gap-1">
+            <p class="flex  bg-gray-300 w-36 p-1 rounded-md justify-center items-center gap-1">
               <img class="w-6" src="assets/coin.png" alt="">
               <span id="third-amount" class="">0 </span> BDT
             </p>
@@ -144,7 +159,7 @@
     </div>
 
 
-    <div id="history-container" class="hidden my-32 ">
+    <div id="history-container" class="hidden my-32 h-[445px] lg:h-[535px]">
 
     </div>
   </main>
