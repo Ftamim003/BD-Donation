@@ -6,11 +6,15 @@ function commonFunctionForAllDonateButton(input,amount,balanceAmount,donateType)
 
     const mainBalance =inputTextById(balanceAmount);
 
-    const totalAmount= inputAmount+changeAmount;
+    const totalAmount= parseFloat(inputAmount)+parseFloat(changeAmount);
     
-    const remainingBalance= mainBalance-inputAmount;
+    const remainingBalance= parseFloat(mainBalance)-parseFloat(inputAmount);
 
-    if(inputAmount<0 || isNaN(inputAmount) ){
+    if(inputAmount===""){
+        alert("Put an amount");
+        return;
+    }
+    else if(inputAmount<=0 || isNaN(inputAmount) ){
            alert("invalid input");
            return
     }
@@ -38,7 +42,8 @@ function commonFunctionForAllDonateButton(input,amount,balanceAmount,donateType)
 // input number function
 function inputNumberById(id){
 
-    const inputValue= parseFloat(document.getElementById(id).value);
+    
+    const inputValue= document.getElementById(id).value;
     return inputValue;
 }
 
@@ -46,7 +51,7 @@ function inputNumberById(id){
 // inputText
 function inputTextById(id){
 
-    const changeAmount = parseFloat(document.getElementById(id).innerText);
+    const changeAmount = document.getElementById(id).innerText;
 
     return changeAmount;
 }

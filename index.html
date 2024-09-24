@@ -6,14 +6,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Donation BD</title>
 
+ 
+  
+  
   <!-- Font Awesome CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
   <!-- Tailwind CDN -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .custom-blur {
+      backdrop-filter: blur(200px); /* Stronger blur effect */
+    background-color: rgba(255, 255, 255, 0.8); /* White background with less transparency */
+}
+        
+    .font-family{
+      font-family: "Lexend", sans-serif;
+    }
+    
+</style>
+  
   <script>
     tailwind.config = {
       theme: {
@@ -31,24 +51,25 @@
 
 </head>
 
-<body >
+<body class="font-family">
 
   <!-- Navbar section -->
-  <header class="bg-navbarBg h-20 pt-3 sticky top-0 z-50 backdrop-sepia-0 ">
-    <nav class=" w-11/12 flex justify-between mx-auto">
+  <header class="bg-navbarBg h-20 pt-3 sticky top-0 backdrop-blur-md bg-orange-100 bg-opacity-50 z-50">
+    <nav class="w-11/12 flex justify-between mx-auto">
       <button onclick="document.location='blog.html'" class="btn w-24 font-bold bg-btnColor">Blog</button>
       <div class="flex items-center">
         <img class="w-7" src="assets/logo.png" alt="">
         <p class="hidden md:flex font-bold p-1">Donate Bangladesh</p>
       </div>
-
+  
       <div class="flex items-center">
         <img class="w-7" src="assets/coin.png" alt="">
-        <p><span id="main-balance" class="p-1">5550 </span> BDT</p>
+        <p><span id="main-balance" class="p-1">5550</span> BDT</p>
       </div>
     </nav>
-  <!-- Navbar End -->
-    <div class="flex justify-center items-center mt-12 md:mt-16 gap-3">
+  
+    <!-- Navbar End -->
+    <div class="flex justify-center items-center mt-5 p-1 pt-5 md:pt-7 gap-3 backdrop-blur-md bg-opacity-50  bg-white/60">
       <button id="donation-btn" class="btn w-28 bg-btnColor font-bold">Donation</button>
       <button id="history-btn" class="btn w-28 bg-white font-bold text-gray-500">History</button>
     </div>
