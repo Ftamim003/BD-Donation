@@ -1,3 +1,41 @@
+// Common function for all donate button
+function commonFunctionForAllDonateButton(input,amount,balanceAmount,donateType){
+    const inputAmount= inputNumberById(input);
+
+    const changeAmount =inputTextById(amount);
+
+    const mainBalance =inputTextById(balanceAmount);
+
+    const totalAmount= inputAmount+changeAmount;
+    
+    const remainingBalance= mainBalance-inputAmount;
+
+    if(inputAmount<0 || isNaN(inputAmount) ){
+           alert("invalid input");
+           return
+    }
+    else if(remainingBalance<0){
+
+        alert("Insufficient balance!");
+           return
+    }
+ 
+    else{
+        document.getElementById('main-balance').innerText=remainingBalance;
+        document.getElementById(amount).innerText=totalAmount;
+         const text=document.getElementById(donateType).innerText;
+    
+        historyTextContainer(inputAmount,text);
+
+        myModal.showModal();
+
+    }
+
+}
+
+
+
+// input number function
 function inputNumberById(id){
 
     const inputValue= parseFloat(document.getElementById(id).value);
@@ -5,6 +43,7 @@ function inputNumberById(id){
 }
 
 
+// inputText
 function inputTextById(id){
 
     const changeAmount = parseFloat(document.getElementById(id).innerText);
@@ -14,6 +53,8 @@ function inputTextById(id){
 
 
 
+
+// History Div Container function
 function historyTextContainer(inputAmount,text){
     const historyContainer= document.createElement('div');
     historyContainer.className= "w-4/5 mx-auto border-2 rounded-2xl my-5 p-7 h:48 md:h-32"; 

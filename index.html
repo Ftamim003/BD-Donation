@@ -32,6 +32,8 @@
 </head>
 
 <body >
+
+  <!-- Navbar section -->
   <header class="bg-navbarBg h-20 pt-3 sticky top-0 z-50 backdrop-sepia-0 ">
     <nav class=" w-11/12 flex justify-between mx-auto">
       <button onclick="document.location='blog.html'" class="btn w-24 font-bold bg-btnColor">Blog</button>
@@ -45,12 +47,14 @@
         <p><span id="main-balance" class="p-1">5550 </span> BDT</p>
       </div>
     </nav>
-
+  <!-- Navbar End -->
     <div class="flex justify-center items-center mt-12 md:mt-16 gap-3">
       <button id="donation-btn" class="btn w-28 bg-btnColor font-bold">Donation</button>
       <button id="history-btn" class="btn w-28 bg-white font-bold text-gray-500">History</button>
     </div>
   </header>
+
+  
 
   <main>
 
@@ -65,7 +69,7 @@
         <h3 class="text-xl md:text-3xl font-bold text-center">Successfully</h3>
         <div class="modal-action flex justify-center items-center">
           <form method="dialog">
-            <!-- if there is a button in form, it will close the modal -->
+           
             <button class="btn">close confirmation</button>
           </form>
         </div>
@@ -159,6 +163,7 @@
     </div>
 
 
+    <!-- History Section -->
     <div id="history-container" class="hidden my-32 h">
 
     </div>
@@ -166,12 +171,15 @@
 
 
 
+
+  <!-- Footer section -->
   <footer id="footer" class="bg-navbarBg pt-3 mt-7 h-20">
 
   </footer>
 
 
   <script src="clickButton.js"></script>
+  <script src="buttonClick.js"></script>
   <script src="functions.js"></script>
 
   <script src="config.tailwind.js"></script>
